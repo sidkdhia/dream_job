@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Page Styles */
+.welcome {
+    height: 100vh;
+    background-image: url('/vecteezy_abstract-futuristic-wave-background-illustration_24399235.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.welcome h1 {
+    font-size: 4rem;
+    margin-bottom: 20px; /* Add space between the heading and the line */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: #333; /* Dark color for the heading */
+    position: relative; /* Positioning for the line */
+    display: inline-block; /* Ensure the line matches the text width */
+}
+
+.welcome h1::after {
+    content: ''; /* Empty content for the line */
+    display: block;
+    width: 100%; /* Make the line as wide as the text */
+    height: 4px; /* Thickness of the line */
+    background-color: #FFD700; /* Color of the line */
+    margin: 10px auto 0; /* Space between the heading and the line */
+    border-radius: 2px; /* Rounded edges for the line */
+}
+
+.welcome p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.welcome a {
+    color: #FFD700; /* Highlighted color for "here" */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.welcome a:hover {
+    border-bottom: 2px solid #FFD700;
+    color: #fff;
+}

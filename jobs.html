@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Job - Discover</title>
+    <link rel="stylesheet" href="jobs.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container" id="jobs">
+        <h1>Discover Your Dream Job</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search for a job..." onkeyup="filterJobs()">
+
+        <!-- Job Blocks -->
+        <div id="jobList">
+            <!-- Doctor Block -->
+            <a href="doctor.html" class="job">
+                <h2>👨‍⚕️ Doctor</h2>
+                <p><strong>💰 Salary:</strong> Tunisia - 2,500 TND/month | USA - $10,000/month</p>
+                <p><strong>✅ Advantages:</strong></p>
+                <ul>
+                    <li>High salary</li>
+                    <li>Respected profession</li>
+                    <li>Helping people</li>
+                </ul>
+                <p><strong>❌ Disadvantages:</strong></p>
+                <ul>
+                    <li>Long working hours</li>
+                    <li>High responsibility</li>
+                    <li>Expensive education</li>
+                </ul>
+            </a>
+
+            <!-- Engineer Block -->
+            <a href="engineer.html" class="job">
+                <h2>🛠️ Engineer</h2>
+                <p><strong>💰 Salary:</strong> Tunisia - 2,000 TND/month | USA - $8,000/month</p>
+                <p><strong>✅ Advantages:</strong></p>
+                <ul>
+                    <li>Creative problem solving</li>
+                    <li>Good salary</li>
+                    <li>Various fields to choose from</li>
+                </ul>
+                <p><strong>❌ Disadvantages:</strong></p>
+                <ul>
+                    <li>Can be stressful</li>
+                    <li>Requires constant learning</li>
+                    <li>Workload pressure</li>
+                </ul>
+            </a>
+
+            <!-- Teacher Block -->
+            <a href="teacher.html" class="job">
+                <h2>📚 Teacher</h2>
+                <p><strong>💰 Salary:</strong> Tunisia - 1,200 TND/month | USA - $4,000/month</p>
+                <p><strong>✅ Advantages:</strong></p>
+                <ul>
+                    <li>Inspiring students</li>
+                    <li>Job security</li>
+                    <li>Good holidays</li>
+                </ul>
+                <p><strong>❌ Disadvantages:</strong></p>
+                <ul>
+                    <li>Low salary</li>
+                    <li>Can be exhausting</li>
+                    <li>Classroom management issues</li>
+                </ul>
+            </a>
+
+            <!-- Software Developer Block -->
+            <a href="Software Developer.html" class="job">
+                <h2>💻 Software Developer</h2>
+                <p><strong>💰 Salary:</strong> Tunisia - 2,500 TND/month | USA - $9,000/month</p>
+                <p><strong>✅ Advantages:</strong></p>
+                <ul>
+                    <li>Remote work options</li>
+                    <li>High demand</li>
+                    <li>Good salary</li>
+                </ul>
+                <p><strong>❌ Disadvantages:</strong></p>
+                <ul>
+                    <li>Long screen time</li>
+                    <li>Requires constant learning</li>
+                    <li>Can be sedentary</li>
+                </ul>
+            </a>
+
+            <!-- Chef Block -->
+            <a href="chef.html" class="job">
+                <h2>👨‍🍳 Chef</h2>
+                <p><strong>💰 Salary:</strong> Tunisia - 1,500 TND/month | USA - $5,000/month</p>
+                <p><strong>✅ Advantages:</strong></p>
+                <ul>
+                    <li>Creative work</li>
+                    <li>Passion-driven</li>
+                    <li>Opportunities for own business</li>
+                </ul>
+                <p><strong>❌ Disadvantages:</strong></p>
+                <ul>
+                    <li>Long working hours</li>
+                    <li>Physically demanding</li>
+                    <li>High-stress environment</li>
+                </ul>
+            </a>
+
+            <!-- Coming Soon Block -->
+            <div class="job coming-soon">
+                <h2>🚀 Coming Soon</h2>
+            </div>
+        </div>
+
+        <!-- Job Not Found Message -->
+        <p id="noResults" style="display: none; text-align: center; color: #eaeaea; font-size: 1.2rem;">Job not found</p>
+    </div>
+
+    <script>
+        function filterJobs() {
+            const searchInput = document.getElementById('searchBar').value.toLowerCase();
+            const jobs = document.querySelectorAll('.job');
+            let found = false;
+
+            jobs.forEach(job => {
+                const jobTitle = job.querySelector('h2').textContent.toLowerCase();
+                if (jobTitle.includes(searchInput) && !job.classList.contains('coming-soon')) {
+                    job.style.display = 'block';
+                    found = true;
+                } else {
+                    job.style.display = 'none';
+                }
+            });
+
+            // Show "Job not found" message if no jobs match the search
+            const noResults = document.getElementById('noResults');
+            noResults.style.display = found ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

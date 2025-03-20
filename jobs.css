@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* Dark blue background */
+    color: #eaeaea; /* Light text color for contrast */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #16213e; /* Darker blue background for the container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+}
+
+h1 {
+    color: #4facfe; /* Light blue for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #4facfe; /* Blue underline for the heading */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Search Bar Styles */
+#searchBar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border: 1px solid #4facfe;
+    border-radius: 8px;
+    background-color: #16213e;
+    color: #eaeaea;
+}
+
+#searchBar::placeholder {
+    color: #dcdcdc; /* Placeholder text color */
+}
+
+#searchBar:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 5px #4facfe;
+}
+
+/* Job Block Styles */
+.job {
+    display: block;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #0f3460; /* Dark blue border for the cards */
+    border-radius: 8px;
+    background-color: #0f3460; /* Dark blue background for the job cards */
+    text-decoration: none; /* Remove underline from links */
+    color: #eaeaea; /* Light text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.job:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+.job h2 {
+    color: #4facfe; /* Light blue for job titles */
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.job p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #dcdcdc; /* Slightly lighter text for descriptions */
+}
+
+/* Advantages and Disadvantages Lists */
+.job ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 10px 0;
+}
+
+.job ul li {
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 1rem;
+    color: #dcdcdc; /* Slightly lighter text for list items */
+}
+
+.job ul li:before {
+    content: '•'; /* Custom bullet point */
+    position: absolute;
+    left: 0;
+    color: #4facfe; /* Light blue bullet points */
+    font-size: 1.2rem;
+}
+
+/* Coming Soon Block */
+.coming-soon {
+    text-align: center;
+    background-color: #0f3460; /* Dark blue background */
+    color: #eaeaea; /* Light text color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    border: 1px dashed #4facfe; /* Dashed border to differentiate it */
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coming-soon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
